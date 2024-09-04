@@ -1,6 +1,3 @@
-// src/index.tsx
-import React from "react";
-
 // ../tokens/dist/index.mjs
 var colors = {
   white: "#FFF",
@@ -105,13 +102,27 @@ var {
 // src/index.tsx
 var Button = styled("button", {
   fontFamily: "$default",
-  backgroundColor: "$ignite500",
-  borderRadius: "$md",
-  padding: "$4"
+  backgroundColor: "$ignite300",
+  borderRadius: "$sm",
+  border: 0,
+  fontWeight: "bold",
+  color: "$white",
+  variants: {
+    size: {
+      small: {
+        fontSize: 14,
+        padding: "$2 $4"
+      },
+      big: {
+        fontSize: 16,
+        padding: "$3 $6"
+      }
+    }
+  },
+  defaultVariants: {
+    size: "small"
+  }
 });
-function App() {
-  return /* @__PURE__ */ React.createElement(Button, null, "Hello World");
-}
 export {
-  App
+  Button
 };
